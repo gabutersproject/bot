@@ -1,5 +1,5 @@
 # Tukang Commit
-![Tukang Commit](https://github.com/sutanlab/tukang-commit/workflows/Tukang%20Commit/badge.svg)
+![Tukang Commit](https://github.com/MhmmdAmier/bot/workflows/Tukang%20Commit/badge.svg)
 
 A bot that can make your Github stats green with scheduled auto commit.
 
