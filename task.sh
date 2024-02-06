@@ -14,6 +14,6 @@ d=`date '+%Y-%m-%dT%H:%M:%SZ'`
 
 echo "## 🤔 LAST UPDATED AT: ${d}" > update.md
 
-git config --local user.email "dewa27bkz@gmail.com"
-git config --local user.name "MhmmdAmier"
+git config --local user.email "projectgabuters@gmail.com"
+git config --local user.name "gabutersproject"
 git commit -am "${arr[$rand]} (at ${d})"
