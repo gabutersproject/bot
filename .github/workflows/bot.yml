@@ -10,9 +10,9 @@ on:
 
 jobs:
   auto-commit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
-      - uses: actions/checkout@master      
+      - uses: actions/checkout@v4      
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -23,7 +23,7 @@ jobs:
           ./task.sh
           
       - name: GitHub Push
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@v1.3.0
         with:
           force: true
           directory: "."
