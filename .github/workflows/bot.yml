@@ -6,7 +6,7 @@ on:
       - master
       
   schedule:
-    - cron: "0 * * * *"
+    - cron: "1 * * * *"
 
 jobs:
   auto-commit:
@@ -23,7 +23,7 @@ jobs:
           ./task.sh
           
       - name: GitHub Push
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v1.1.0
         with:
           force: true
           directory: "."
