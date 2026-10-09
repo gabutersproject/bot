@@ -6,16 +6,18 @@ on:
       - master
       
   schedule:
-    - cron: "1 * * * *"
+    - cron: "0,30 * * * *"
 
 jobs:
   auto-commit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v4      
         with:
+          ref: ${{ github.head_ref }}
           persist-credentials: false
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Run Bot Task
         run: |
@@ -23,8 +25,9 @@ jobs:
           ./task.sh
           
       - name: GitHub Push
-        uses: ad-m/github-push-action@v1.3.0
+        uses: ad-m/github-push-action@master
         with:
           force: true
           directory: "."
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
